@@ -7,9 +7,9 @@ npm-debug.*
 *.key
 *.mobileprovision
 service.json
+twilio.js
 *.orig.*
 web-build/
-
 
 
 # macOS
