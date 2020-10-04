@@ -1,4 +1,3 @@
-/* eslint-disable promise/always-return */
 const admin = require('firebase-admin')
 const twilio = require('./twilio')
 
@@ -12,7 +11,7 @@ module.exports = function (req, res) {
   admin
     .auth()
     .getUser(phone)
-    .then((userRecord) => {
+    .then(() => {
       const code = Math.floor(Math.random() * 8999 + 1000)
 
       twilio.messages.create(
